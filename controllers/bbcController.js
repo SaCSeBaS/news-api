@@ -16,8 +16,6 @@ const bbcScraper = async (url) => {
     let source = $('.byline__title').text();
     // OBTENER FECHA DE LA PUBLICACIÓN
     let publishDate = $('.with-extracted-share-icons').find('.date--v2').text();
-    // OBTENER SUMMARY DE LA PUBLICACIÓN
-    let summary = '';
     // OBTENER MATERIAL MULTIMEDIA - DESCRIPCIÓN - FUENTE - TIPO
     let coverType;
     let coverDescription;
@@ -80,7 +78,7 @@ const bbcScraper = async (url) => {
         author: author,
         source: source,
         publishDate: publishDate,
-        summary: summary,
+        summary: '',
         cover: {
             coverMultimedia: coverMultimedia,
             coverDescription: coverDescription,
